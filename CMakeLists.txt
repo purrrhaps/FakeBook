@@ -3,9 +3,13 @@ project(FakeBook)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(FakeBook src/main.cpp
+add_executable(FakeBook
+        src/main.cpp
         include/Fakebook.h
         include/User.h
         include/Post.h
         include/Authenticator.h
-        include/DummyDataGenerator.h)
+        include/DummyDataGenerator.h
+        src/DummyDataGenerator.cpp)
+
+target_include_directories(FakeBook PRIVATE include)

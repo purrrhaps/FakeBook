@@ -13,7 +13,6 @@ private:
 
     // age, gender, isPublicProfile, isPublicPost can all be done within the methods and don't need their own pools
     std::mt19937 randomizer;
-    std::random_device seeder;
     std::vector<std::string> userIdPool; // can also work as authorId
     std::vector<std::string> usernamePool;
     std::vector<std::string> emailPool;
@@ -27,7 +26,6 @@ public:
     DummyDataGenerator();
     void populateUsers();
     void populatePosts();
-    void populateFriends();
-    void populateFriendRequests();
+    void populateFriendsAndRequests();
 };
 #endif //DUMMYDATAGENERATOR_H
