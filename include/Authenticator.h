@@ -3,7 +3,6 @@
 #include <string>
 #include <vector>
 class User;
-class FakeBook;
 
 class Authenticator{
 private:
