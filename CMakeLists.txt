@@ -6,4 +6,5 @@ set(CMAKE_CXX_STANDARD 20)
 add_executable(FakeBook src/main.cpp
         include/Fakebook.h
         include/User.h
-        include/Post.h)
+        include/Post.h
+        include/Authenticator.h)
