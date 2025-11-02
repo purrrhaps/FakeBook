@@ -2,6 +2,8 @@
 #define USER_H
 #include <string>
 #include <list>
+#include <vector>
+class Post;
 
 class User {
 private:
@@ -11,9 +13,10 @@ private:
     int age;
     char gender;
     std::string location;
-    bool isPrivate;
+    bool isPublic;
     std::list<User*> friends;
     std::string userId;
+    std::vector<Post*> posts;
 public:
     User();
     void createPost();
@@ -22,6 +25,6 @@ public:
     void declineRequest();
     void viewOwnProfile();
     void viewOtherProfile(User* other);
-    void viewFeed();
+    void viewFeed(); // TODO: Min-heap sort.
 };
 #endif //USER_H
