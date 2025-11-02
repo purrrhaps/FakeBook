@@ -8,7 +8,7 @@ private:
     std::string postId;
     User* authorId;
     std::string content;
-    bool isPublic;
+    bool isPublicPost;
     std::chrono::system_clock::time_point timeUploaded;
 public:
     Post(User* author, std::string _content, std::chrono::system_clock::time_point timeStamp, bool _isPublic, std::string postId);

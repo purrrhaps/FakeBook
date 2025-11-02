@@ -13,12 +13,13 @@ private:
     int age;
     char gender;
     std::string location;
-    bool isPublic;
+    bool isPublicProfile;
     std::list<User*> friends;
     std::string userId;
     std::vector<Post*> posts;
 public:
-    User();
+    User(std::string uName, std::string uId, std::string email, std::string password, int _age,
+              char _gender, std::string _location, bool _isPublicProfile);
     void createPost();
     void changePrivacySetting();
     void sendRequest();
