@@ -22,9 +22,23 @@ private:
 public:
     User(std::string uName, std::string uId, std::string email, std::string password, int _age,
          char _gender, std::string _location, bool _isPublicProfile, std::chrono::system_clock::time_point _createdAt);
-    void createPost();
+
+    std::string getUserId() {
+        return userId;
+    }
+    void addPost(Post* _post) {
+        posts.push_back(_post);
+    }
+    void addFriend(User* friendUser) {
+        friends.push_back(friendUser);
+    }
+    std::list<User*> getFriends() const {
+        return friends;
+    }
+    Post* createPost();
     void changePrivacySetting();
     void sendRequest();
+    User* acceptRequest();
     void declineRequest();
     void viewOwnProfile();
     void viewOtherProfile(User* other);

@@ -10,6 +10,7 @@ add_executable(FakeBook
         include/Post.h
         include/Authenticator.h
         include/DummyDataGenerator.h
-        src/DummyDataGenerator.cpp)
+        src/DummyDataGenerator.cpp
+        src/FakeBook.cpp)
 
 target_include_directories(FakeBook PRIVATE include)

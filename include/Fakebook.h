@@ -10,14 +10,15 @@ private:
     User* currentSession = nullptr;
     std::vector<User*> masterUserList;
     std::vector<Post*> masterPostList;
+    User* idToPointer(std::string userId) const;
 public:
     FakeBook();
     void runFakeBook();
     void parseAllUsers(); // this must happen before parseAllFriends() or parseAllPosts() are called.
     void parseAllFriends();
     void parseAllPosts();
-    void appendUser();
     void appendFriend();
-    void appendPost();
+    void appendPost(Post *newPost);
+    void saveAllFriendsToFile();
 };
 #endif //FAKEBOOK_H
