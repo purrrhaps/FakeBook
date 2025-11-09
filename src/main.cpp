@@ -1,8 +1,6 @@
-#include "DummyDataGenerator.h"
+#include "Fakebook.h"
 int main() {
-    DummyDataGenerator gen;
-    gen.populateUsers();
-    gen.populateFriendsAndRequests();
-    gen.populatePosts();
+    FakeBook fakebookApp;
+    fakebookApp.runFakeBook();
     return 0;
 }

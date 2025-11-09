@@ -32,14 +32,29 @@ public:
     void addFriend(User* friendUser) {
         friends.push_back(friendUser);
     }
+    std::string getEmail() const {
+        return email;
+    }
+    std::string getPassword() const {
+        return password;
+    }
     std::list<User*> getFriends() const {
         return friends;
     }
+    std::string getUserName() const {
+        return userName;
+    }
+    std::vector<Post*> getPosts() const {
+        return posts;
+    }
+    bool isPublic() const {
+        return isPublicProfile;
+    }
+    void removeFriend(User* exFriend) {
+        friends.remove(exFriend);
+    }
     Post* createPost();
     void changePrivacySetting();
-    void sendRequest();
-    User* acceptRequest();
-    void declineRequest();
     void viewOwnProfile();
     void viewOtherProfile(User* other);
     void viewFeed(); // TODO: Min-heap sort.

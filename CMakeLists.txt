@@ -11,6 +11,9 @@ add_executable(FakeBook
         include/Authenticator.h
         include/DummyDataGenerator.h
         src/DummyDataGenerator.cpp
-        src/FakeBook.cpp)
+        src/FakeBook.cpp
+        src/Authenticator.cpp
+        src/User.cpp
+        src/Post.cpp)
 
 target_include_directories(FakeBook PRIVATE include)
